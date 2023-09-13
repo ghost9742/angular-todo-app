@@ -1,0 +1,42 @@
+<div class="new-todo">
+  <form class="form" [formGroup]="todoForm">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        formControlName="description"
+        placeholder="New Todo"
+        required
+        [ngClass]="
+          (!todoForm.valid && todoForm.touched) || !isValid
+            ? 'border-invalid'
+            : ''
+        "
+      />
+      <p
+        class="alert"
+        *ngIf="(!todoForm.valid && todoForm.touched) || !isValid"
+      >
+        Please enter the todo description!
+      </p>
+    </div>
+    <div class="mb-3 form-check">
+      <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Urgent</label> -->
+      <input
+        class="radio-btn"
+        type="radio"
+        name="flexRadioDefault"
+        id="urgent"
+        name="urgent"
+        formControlName="urgent"
+      />
+      <label class="label" for="flexRadioDefault1"> Urgent </label>
+    </div>
+    <button type="button" class="btn-submit" (click)="onSubmit()">
+      <fa-icon class="submit icon" [icon]="faArrowRight"></fa-icon> Submit
+    </button>
+  </form>
+</div>

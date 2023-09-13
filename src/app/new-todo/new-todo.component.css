@@ -1,0 +1,102 @@
+.new-todo {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #1d2038;
+  padding: 120px 30px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1180px) {
+  .new-todo {
+    height: 700px;
+  }
+  .form {
+    width: 500px;
+    height: 300px;
+    align-items: center;
+    padding: 30px 30px;
+  }
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 300px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #722ed3;
+  color: #fff;
+}
+
+.form-control:focus {
+  outline: none;
+}
+.form-control::placeholder {
+  color: #d8d8d8;
+  transition: all 0.4s;
+}
+
+.form-control:focus::placeholder {
+  transform: translateY(20px);
+}
+
+.form-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.label {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.radio-btn {
+  margin-top: 20px;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  background-color: #722ed3;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.4s;
+}
+
+.btn-submit:hover {
+  background-color: #0047e0;
+  padding: 10px 25px;
+}
+
+.border-invalid {
+  border-bottom: 2px solid #f50424;
+}
+.ng-valid {
+  border-bottom: 2px solid #722ed3;
+}
+.ng-valid p {
+  display: none;
+}
+.alert {
+  color: #f50424;
+}

@@ -1,0 +1,55 @@
+<div class="alert-container">
+  <div class="alert alert-success" role="alert" *ngIf="todoCompletedGetter">
+    {{ titleCompleted + " completed" }}
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="todoDeletedGetter">
+    {{ title + " deleted" }}
+  </div>
+</div>
+
+<div class="flex-container">
+  <div class="new-todo-container">
+    <app-new-todo></app-new-todo>
+  </div>
+  <div *ngIf="todos.length !== 0" class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-8">
+        <div class="card-hover-shadow-2x mb-3 card">
+          <div class="card-header-tab card-header">
+            <div
+              class="card-header-title font-size-lg text-capitalize font-weight-normal"
+            >
+              <i class="fa fa-tasks"></i>&nbsp;Task Lists
+            </div>
+          </div>
+          <div class="scroll-area-sm">
+            <ng-scrollbar>
+              <div style="position: static" class="ps ps--active-y">
+                <div class="ps-content">
+                  <ul class="list-group list-group-flush">
+                    <app-todo
+                      *ngFor="let todo of todos"
+                      [todo]="todo"
+                    ></app-todo>
+                  </ul>
+                </div>
+              </div>
+            </ng-scrollbar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="todos.length === 0" class="no-todo">
+    <fa-icon class="list icon" [icon]="faList"></fa-icon>
+
+    <a
+      style="margin-top: 50px"
+      class="btn"
+      routerLink="/new-task"
+      routerLinkActive="new-task-svg-active"
+      ><fa-icon class="check icon" [icon]="faListCheck"></fa-icon> Create
+      task</a
+    >
+  </div>
+</div>

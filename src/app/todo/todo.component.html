@@ -1,0 +1,33 @@
+<li class="list-group-item">
+  <div
+    class="todo-indicator"
+    [ngClass]="todo.urgent ? 'bg-danger' : 'bg-primary'"
+  ></div>
+  <div class="widget-content p-0">
+    <div class="widget-content-wrapper">
+      <div class="widget-content-left mr-2">
+        <div class="custom-checkbox custom-control"></div>
+      </div>
+      <div class="widget-content-left flex2">
+        <div class="widget-heading">{{ todo.description }}</div>
+        <div *ngIf="todo.urgent" class="widget-subheading">
+          <fa-icon class="icon-urgent" [icon]="faTriangleExclamation"></fa-icon>
+        </div>
+      </div>
+
+      <div class="widget-content-right">
+        <fa-icon
+          class="complete icon"
+          [icon]="faCheck"
+          (click)="complete(todo.id, todo)"
+        ></fa-icon>
+
+        <fa-icon
+          class="delete icon"
+          [icon]="faTrash"
+          (click)="delete(todo.id)"
+        ></fa-icon>
+      </div>
+    </div>
+  </div>
+</li>

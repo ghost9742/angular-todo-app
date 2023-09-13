@@ -1,0 +1,45 @@
+<div class="alert-container">
+  <div class="alert-uncomplete" role="alert" *ngIf="todoUncompletedGetter">
+    {{ titleUncompleted + " returned to task list" }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="row d-flex justify-content-center container">
+    <div class="col-md-8">
+      <div class="card-hover-shadow-2x mb-3 card">
+        <div class="card-header-tab card-header">
+          <div
+            class="card-header-title font-size-lg text-capitalize font-weight-normal"
+          >
+            <i class="fa fa-tasks"></i>&nbsp;Completed tasks
+          </div>
+        </div>
+
+        <div class="scroll-area-sm">
+          <ng-scrollbar class="my-scrollbar">
+            <div style="position: static" class="ps ps--active-y">
+              <div class="ps-content">
+                <ul class="list-group">
+                  <div class="container">
+                    <div
+                      *ngFor="let todo of completedTodos"
+                      class="history-todo"
+                    >
+                      <p>{{ todo.description }}</p>
+                      <fa-icon
+                        class="icon"
+                        [icon]="faShare"
+                        (click)="uncomplete(todo.id, todo)"
+                      ></fa-icon>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </ng-scrollbar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

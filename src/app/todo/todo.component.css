@@ -1,0 +1,75 @@
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 10px;
+  background-color: #232228;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.todo-indicator {
+  position: absolute;
+  width: 4px;
+  height: 60%;
+  border-radius: 0.3rem;
+  left: 0.625rem;
+  top: 20%;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.widget-content {
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.widget-content .widget-content-wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+  align-items: center;
+}
+
+.widget-content .widget-content-right.widget-content-actions {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.widget-content .widget-content-right {
+  margin-left: auto;
+}
+.widget-subheading {
+  color: #f50424;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.icon {
+  padding: 10px;
+  border-radius: 100%;
+}
+.icon:hover {
+  cursor: pointer;
+}
+
+.complete {
+  color: rgb(94, 235, 0);
+  margin-right: 10px;
+}
+
+.complete:hover {
+  color: rgb(0, 245, 61);
+}
+.delete {
+  color: #691823;
+}
+
+.delete:hover {
+  color: #f50424;
+}
+
+.icon-urgent {
+  font-size: 15px;
+}

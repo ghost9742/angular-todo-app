@@ -1,0 +1,72 @@
+.container {
+  padding: 20px;
+
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  text-align: left;
+  height: 100%;
+  width: 65%;
+}
+
+@media (max-width: 1180px) {
+  .container {
+    width: 90%;
+  }
+}
+.history-todo {
+  position: relative;
+  display: flex;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 10px;
+  background-color: #232228;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scroll-area-sm {
+  height: 60vh;
+}
+
+.my-scrollbar {
+  --scrollbar-border-radius: 7px;
+  --scrollbar-padding: 4px;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: transparent;
+  --scrollbar-wrapper-color: transparent;
+  --scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
+  --scrollbar-thumb-hover-color: var(--scrollbar-thumb-color);
+  --scrollbar-size: 5px;
+  --scrollbar-hover-size: var(--scrollbar-size);
+  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+}
+
+.icon {
+  color: #0047e0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.alert-container {
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+
+.alert-uncomplete {
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  background-color: #0047e0;
+}
